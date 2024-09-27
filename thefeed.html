@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Feed: Mike's Digital Abduction</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>The<br>Feed</h1>
+    </header>
+    <div class="marquee">
+        <ul class="marquee__content">
+            <li>☆ DESTROY ☆ ALL ☆ HUMANS ☆</li>
+            <li> DESTROY ☆ ALL ☆ HUMANS </li>
+            <li>☆ DESTROY ☆ ALL ☆ HUMANS</li>
+        </ul>
+        <!-- Duplicate content for continuous scroll -->
+        <ul aria-hidden="true" class="marquee__content">
+            <li>☆ DESTROY ☆ ALL ☆ HUMANS ☆</li>
+            <li> DESTROY ☆ ALL ☆ HUMANS </li>
+            <li>☆ DESTROY ☆ ALL ☆ HUMANS</li>
+        </ul>
+    </div>
+    <nav>
+        <img src="img/Alien.png" alt="alien icon" class="alien-img">
+        <h3>Humans</h3>
+        <hr>
+        <ul>
+            <li>
+                <img src="img/human_icon.svg" alt="simplified human icon graphic" class="human_icon">
+                <a href="http://example.com">Andreas</a>
+            </li>
+            <li>
+                <img src="img/human_icon.svg" alt="simplified human icon graphic" class="human_icon">
+                <a href="http://example.com">Arisa</a>
+            </li>
+            <li>
+                <img src="img/human_icon.svg" alt="simplified human icon graphic" class="human_icon">
+                <a href="http://example.com">Finn</a>
+                </li>
+            <li>
+                <img src="img/human_icon.svg" alt="simplified human icon graphic" class="human_icon">
+                <a href="http://example.com">Hendrick</a>
+            </li>
+            <li>
+                <img src="img/human_icon.svg" alt="simplified human icon graphic" class="human_icon">
+                <a href="http://example.com">Jack</a>
+            </li>
+            <li>
+                <img src="img/human_icon.svg" alt="simplified human icon graphic" class="human_icon">
+                <a href="thefeed.html">Mike</a></li>
+            <li>
+                <img src="img/human_icon.svg" alt="simplified human icon graphic" class="human_icon">
+                <a href="http://example.com">Milo</a>
+            </li>
+            <li>
+                <img src="img/human_icon.svg" alt="simplified human icon graphic" class="human_icon">
+                <a href="http://example.com">Petra</a>
+            </li>
+            <li>
+                <img src="img/human_icon.svg" alt="simplified human icon graphic" class="human_icon">
+                <a href="http://example.com">Tracy</a>
+            </li>
+            <li>
+                <img src="img/human_icon.svg" alt="simplified human icon graphic" class="human_icon">
+                <a href="http://example.com">Zane</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="intro">
+            <p>"Hello Earthlings! We’ve abducted Mike. Yes, you read that right. And when we’re not tirelessly torturing or interrogating him — we’re sifting through the contents of his phone... which has been, let's just say; <i>amusing</i>!
+            <br><br>    
+            Don’t fret foul creatures, Mike’s just the start. You're next! We’re here to takeover your planet, exploit your digital activities, and spill the cosmic tea!"
+            <br><br>
+            [... UNCONSOLABLE LAUGHTER ...]
+            </p>
+        </section>
+        
+        <section id="post1">
+            <video class="banner-video" src="img/particle_banner.mp4" autoplay muted loop></video>
+            <h3>Permission Settings:</h3>
+            <img src="img/cookies.png" alt="Permission Settings Image">
+            <p>"Under a spell of deep delusion, Humans (like Mike) hit 'I Agree' as if it were a born reflex, thinking it grants some form of guaranteed privacy. SPOILER ALERT: it doesn’t! By the time you've clicked past the 'Terms and Conditions', we’ve already been granted full access. C'mon people...It’s like signing a contract with your eyes closed!"</p>
+            
+            <!-- Toggle Questions in Flexbox Row -->
+            <div class="toggle-section">
+                <div class="toggle-container">
+                    <h4>info. theft?</h4>
+                    <label class="toggle">
+                        <input type="checkbox" onclick="toggleYes(this)">
+                        <span class="slider"></span>
+                        <span class="label-text">Yes</span>
+                    </label>
+                </div>
+                <div class="toggle-container">
+                    <h4>data mining?</h4>
+                    <label class="toggle">
+                        <input type="checkbox" onclick="toggleYes(this)">
+                        <span class="slider"></span>
+                        <span class="label-text">Yes</span>
+                    </label>
+                </div>
+                <div class="toggle-container">
+                    <h4>surveillance?</h4>
+                    <label class="toggle">
+                        <input type="checkbox" onclick="toggleYes(this)">
+                        <span class="slider"></span>
+                        <span class="label-text">Yes</span>
+                    </label>
+                </div>
+            </div>
+            <br>
+        </section>
+
+        <section id="post2">
+            <h3>Internet Dating:</h3>
+            
+            <p>"Humans swipe for love like they’re shopping for expired soup. On these apps, algorithms and blurry selfies decide lifelong romantic relationships and deceptive catfishing profiles run rampant. To be honest, we’ve seen stronger cosmic connections in asteroid fields."</p>
+            
+            <!-- Kiss or Kill Interactive Alien Profiles -->
+            <div id="kiss-or-kill">
+                <hr>
+                <h2>Martian Mingle</h2><hr><br>
+                <div id="profile-container">
+                    <div class="profile-card" id="profile1">
+                        <img src="img/alien1.png" alt="Alien Profile 1">
+                        <h4>Gabnar the Magnificent</h4>
+                        <p>"Looking for someone to conquer galaxies and then a plate of nachos with."</p>
+                    </div>
+                    <div class="profile-card" id="profile2">
+                        <img src="img/alien2.png" alt="Alien Profile 2">
+                        <h4>Thraxia the Destroyer</h4>
+                        <p>"I enjoy star gazing and total planetary domination."</p>
+                    </div>
+                    <div class="profile-card" id="profile3">
+                        <img src="img/alien3.png" alt="Alien Profile 3">
+                        <h4>Stacy of Nebula 9</h4>
+                        <p>"Your mother's worst nightmare."</p>
+                    </div>
+                    <!-- Final Card, hidden initially -->
+                    <div class="profile-card" id="final-card" >
+                        <br><br><br><br><br><br><br>
+                        <h4>Sorry! All out of hot extraterrestials in your local area...</h4>
+                    </div>
+                </div>
+                <br><br><hr>
+                <!-- Buttons for Kiss or Kill Actions -->
+                <div id="actions">
+                    <button id="kill" onclick="swipeLeft()">Kill</button>
+                    <button id="kiss" onclick="swipeRight()">Kiss</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="post3">
+            <div class="video-grid">
+                <video src="img/buy1.mp4" class="grid-video" alt="BUY! BUY! BUY!" autoplay muted loop></video>
+                <video src="img/buy2.mp4" class="grid-video" alt="BUY! BUY! BUY!" autoplay muted loop></video>
+                <video src="img/buy1.mp4" class="grid-video" alt="BUY! BUY! BUY!" autoplay muted loop></video>
+                <video src="img/buy2.mp4" class="grid-video" alt="BUY! BUY! BUY!" autoplay muted loop></video>
+                <video src="img/buy1.mp4" class="grid-video" alt="BUY! BUY! BUY!" autoplay muted loop></video>
+                <video src="img/buy2.mp4" class="grid-video" alt="BUY! BUY! BUY!" autoplay muted loop></video>
+                <video src="img/buy1.mp4" class="grid-video" alt="BUY! BUY! BUY!" autoplay muted loop></video>
+                <video src="img/buy2.mp4" class="grid-video" alt="BUY! BUY! BUY!" autoplay muted loop></video>
+                <video src="img/buy1.mp4" class="grid-video" alt="BUY! BUY! BUY!" autoplay muted loop></video>
+            </div>
+            <h3>Targeted Ads:</h3>
+            <p>"Mike claims to hate online ads, yet he clicks on them <strong>EVERY TIME</strong>. For instance, Mike recently looked up 'cat memes' and now he’s unknowingly brainwashed into buying related products: cat yoga mats, cat Stanley cups, and so on. Admit it, humans, you like being manipulated..."</p>
+        </section>
+        
+        <section id="post4">
+            <h3>Notifications:</h3>
+            <p>"Ding, you’re addicted! You humans can’t go five minutes without checking your phones. If Mike spent as much time being productive as he does tending to his online persona, Earth would have flying cars by now!"</p>
+            <button class="notify-button" onclick="triggerNotifications()"><u><b>Warning</b></u>: Click at Your Own Risk</button>
+        </section>
+        
+        <!-- Sound effect -->
+        <audio id="bubbleSound" src="audio/bubble_sound.mp3"></audio>
+        
+
+        <section id="post5">
+            <h3>Watches & Wearables:</h3>
+            <img src="img/wearable-tech.png" alt="Wearable Tech Image">
+            <p>"Look busy, do nothing! Humans wear devices to measure every waking step and calorie, yet they ignore these same gadgets while sitting on the couch. From an alien point of view, it’s like you're wearing a pysical reminder that you’re too lazy to get outside and regularly excercise."</p>
+        </section>
+
+        <section id="post6">
+            <h3>Spam:</h3>
+            <img src="img/spam-calls.png" alt="Spam Calls Image">
+            <p>"Day to day, Humans are bombarded by spam calls. From concerned telemarketers trying to reach you about your car's extended waranty to unrelenting political surveys, the dial tones of insanity are ringing off the hook."</p>
+        </section>
+
+        <section id="post7">
+            <h3>Doomscrolling:</h3>
+            <div class="video-flexbox">
+                <video src="img/nyt1.mp4" alt="scrolling screen capture of the New York Times -- visually depicting the idea of doomscrolling" autoplay muted loop></video>
+                <video src="img/nyt2.mp4" alt="scrolling screen capture of the New York Times -- visually depicting the idea of doomscrolling" autoplay muted loop></video>
+                <video src="img/nyt1.mp4" alt="scrolling screen capture of the New York Times -- visually depicting the idea of doomscrolling" autoplay muted loop></video>
+            </div>
+            <p>"Mike, like most humans, mindlessly scrolls through the disasterous local news articles and global travesties. Like many, he absorbs himself in reading about the world ending, but doesn’t bother doing anything about it. Classic Earth logic."</p>
+        </section>
+
+        <section id="post8">
+            <h3>Job Hunting:</h3>
+            <img src="img/linked_in.png" alt="Mike's LinkedIn profile page">
+            <p>"In the never-ending search for validation, Humans constantly seek employment, even when they already have jobs. Mike’s LinkedIn profile screams 'Hire me! I’m desperate and ready for anything', while his Google search history reveals his true 'how to surrive on Monday morning' workplace demeanor. #live #laugh #labor"</p>
+        </section>
+
+        <section id="post9">
+            <h3>Binge-Watching:</h3>
+            <video src="img/netflix1.mp4" alt="horizontal scrolling screen capture of Netflix titles" autoplay muted loop></video>
+            <video src="img/netflix2.mp4" alt="horizontal scrolling screen capture of Netflix titles" autoplay muted loop></video>
+            <video src="img/netflix3.mp4" alt="horizontal scrolling screen capture of Netflix titles" autoplay muted loop></video>
+            <p>"Humans call it 'relaxing,' but really they’re just ravenous for more screen time. If they revered saving the planet as they much as they do binge-watching Netflix, Earth might  <i> actually </i> stand a chance."</p>
+        </section>
+
+        <section id="post10">
+            <h3>Package Tracking:</h3>
+            <img src="img/package.gif" alt="3 battered postal packages rotate on loop" loop>
+            <p>"Porch Pirates Beware! Mike’s checking his package status on the hour. Seriously, Humans act like their Amazon delivery is a life-or-death situation. Relax, Earthlings, your priority-mailed/bootlegged flip flops are on the way."</p>
+        </section>
+        <div class="marquee">
+            <ul class="marquee__content">
+                <li>☆ DESTROY ☆ ALL ☆ HUMANS ☆</li>
+                <li> DESTROY ☆ ALL ☆ HUMANS </li>
+                <li>☆ DESTROY ☆ ALL ☆ HUMANS</li>
+            </ul>
+            <!-- Duplicate content for continuous scroll -->
+            <ul aria-hidden="true" class="marquee__content">
+                <li>☆ DESTROY ☆ ALL ☆ HUMANS ☆</li>
+                <li> DESTROY ☆ ALL ☆ HUMANS </li>
+                <li>☆ DESTROY ☆ ALL ☆ HUMANS</li>
+            </ul>
+        </div>
+        <script>
+
+            let currentProfile = 0;
+
+            function swipeLeft() {
+                const profiles = document.querySelectorAll('.profile-card');
+                if (currentProfile < profiles.length - 1) {
+                    profiles[currentProfile].classList.add('swipe-left');
+                    setTimeout(() => {
+                        profiles[currentProfile].style.display = 'none';
+                        currentProfile++;
+                        if (currentProfile < profiles.length - 1) {
+                            profiles[currentProfile].style.display = 'flex';
+                        } else {
+                            document.getElementById('final-card').style.display = 'block';
+                        }
+                    }, 600); // Delay to allow the swipe animation to finish
+                }
+            }
+
+            function swipeRight() {
+                const profiles = document.querySelectorAll('.profile-card');
+                if (currentProfile < profiles.length - 1) {
+                    profiles[currentProfile].classList.add('swipe-right');
+                    setTimeout(() => {
+                        profiles[currentProfile].style.display = 'none';
+                        currentProfile++;
+                        if (currentProfile < profiles.length - 1) {
+                            profiles[currentProfile].style.display = 'flex';
+                        } else {
+                            document.getElementById('final-card').style.display = 'block';
+                        }
+                    }, 600); // Delay to allow the swipe animation to finish
+                }
+            }
+
+            function triggerNotifications() {
+                const notificationIcons = ['email_icon.svg', 'like_icon.svg', 'love_icon.svg', 'message_icon.svg'];
+                const bubbleSound = document.getElementById('bubbleSound');
+                
+                // Play the bubble sound
+                bubbleSound.play();
+
+                // Generate 45 floating icons
+                for (let i = 0; i < 45; i++) {
+                    const icon = document.createElement('img');
+                    icon.src = `img/${notificationIcons[Math.floor(Math.random() * notificationIcons.length)]}`;
+                    icon.classList.add('floating-icon');
+
+                    // Set random horizontal position for the icons
+                    icon.style.left = `${Math.random() * 100}vw`;
+                    icon.style.top = `${Math.random() * 80}vh`;
+
+                    document.body.appendChild(icon);
+
+                    // Remove icon after the animation finishes (4 seconds)
+                    setTimeout(() => {
+                        icon.remove();
+                    }, 4000);
+                }
+            }
+
+        </script>
+        <!-- Put Footer Here -->
+    </main>
+</body>
+</html>

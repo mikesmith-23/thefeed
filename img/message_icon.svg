@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #161626;
+        font-size: 4.04px;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: Arial-Black, 'Arial Black';
+        font-weight: 800;
+      }
+
+      .cls-3 {
+        opacity: .5;
+      }
+
+      .cls-2 {
+        fill: #a89bd9;
+        font-size: 1.08px;
+      }
+
+      .cls-4 {
+        fill: #5e567f;
+        stroke: #161626;
+        stroke-miterlimit: 10;
+        stroke-width: .7px;
+      }
+
+      .cls-5 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <circle class="cls-4" cx="12" cy="12" r="11.03"/>
+  </g>
+  <g id="Layer_7" data-name="Layer 7">
+    <g class="cls-3">
+      <path class="cls-5" d="M18.8,6.2H5.2c-.17,0-.3.13-.3.3v9.15c0,.17.13.3.3.3h.88l-.02-.03h4.02l-.02.03h8.74c.17,0,.3-.13.3-.3V6.5c0-.17-.13-.3-.3-.3Z"/>
+      <path class="cls-5" d="M6.06,15.92l.02.03,2.23,2.49c.08.09.22.07.28-.03l1.48-2.46.02-.03h-4.02Z"/>
+    </g>
+    <text class="cls-1" transform="translate(5.76 12.33)"><tspan x="0" y="0">Heyy!</tspan></text>
+    <g>
+      <path class="cls-5" d="M18.12,14.24h-3.62s-.08.03-.08.08v2.44s.03.08.08.08h1.67l-.11-.19h1.54l-.17.19h.69s.08-.03.08-.08v-2.44s-.03-.08-.08-.08Z"/>
+      <path class="cls-5" d="M16.05,16.65l.11.19.46.77s.08.04.11.01l.7-.78.17-.19h-1.54Z"/>
+    </g>
+    <text class="cls-2" transform="translate(14.97 15.97)"><tspan x="0" y="0">Hiiiii</tspan></text>
+  </g>
+</svg>

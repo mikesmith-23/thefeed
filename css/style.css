@@ -1,0 +1,556 @@
+/* The Feed : CSS Stylesheet */
+
+/* Importing Martian Mono from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;700&display=swap');
+
+/* Font-face for Mitashi Classic (ensure this font is in your 'fonts' folder) */
+@font-face {
+    font-family: 'Mitashi Classic';
+    src: url('fonts/Mitashi-Classic.ttf') format('truetype');
+}
+
+/* Define CSS variables for color story */
+:root {
+    --background-dark: #161526;
+    --secondary-dark: #3A3959;
+    --light-purple: #A89AD9;
+    --alien-green: #9BF238; /* updated alien green color */
+    --white: #ffffff;
+}
+
+/* Base styling for the entire website */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Martian Mono', monospace; /* default font */
+    background-color: var(--background-dark); /* dark alien theme background */
+    color: var(--white);
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 16px; /* slightly smaller base font size for better balance */
+}
+
+header {
+    font-family: 'Mitashi Classic', sans-serif; /* Futuristic header font */
+    color: var(--alien-green);
+    font-size: 4rem; /* Large impactful text */
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    text-transform: uppercase; /* Makes it feel bolder and more futuristic */
+}
+
+main {
+    margin-left: 22%;
+    padding: 2%;
+    font-size: 1.1em; /* body text size balanced for readability */
+}
+
+main h2 {
+    color: var(--alien-green);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+main strong {
+    color: var(--light-purple); /* Contrast with green for a modern, sleek feel */
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    margin-left: 26%;
+    font-size: 2em; 
+}
+
+h2 {
+    font-size: 1.6em; /* smaller h2 for visual hierarchy */
+    color: var(--alien-green);
+    font-family: 'Martian Mono', monospace;
+    margin: 0.5em 0; /* add a bit of space below */
+}
+
+h3 {
+    color: var(--alien-green); /* alien green for titles */
+    font-family: 'Mitashi Classic', sans-serif;
+    font-size: 1.5em; /* balanced h3 for post titles */
+    margin-bottom: 0.5rem;
+}
+
+.toggle-container h4 {
+    color: var(--light-purple); /* alien green for titles */
+    font-family: 'Martian Mono', monospace;
+    margin: 2%;
+}
+
+#profile-container h4 {
+    color: var(--light-purple); /* alien green for titles */
+    font-family: 'Martian Mono', monospace;
+    margin: 2%;
+}
+
+#final-card h4 {
+    color: var(--secondary-dark); /* alien green for titles */
+    font-family: 'Martian Mono', monospace;
+    margin: 2%;
+}
+
+p {
+    color: var(--white);
+    font-size: 1.1em; /* body text size adjusted for balance */
+}
+
+nav {
+    background-color: var(--background-dark); /* matches body background */
+    color: var(--light-purple); /* lighter purple tone */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    padding: 2%;
+    border-right: 2px solid var(--light-purple);
+}
+
+nav h3 {
+    font-family: 'Mitashi Classic', sans-serif;
+    color: var(--alien-green);
+    font-size: 1.6em; /* balanced nav heading */
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 7%;
+}
+
+nav li {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically centers the icon and text */
+    margin-bottom: 1em;
+}
+
+nav a {
+    color: var(--alien-green);
+    text-decoration: none;
+    font-size: 1.2em; /* increased nav link size */
+    font-weight: bold;
+    margin-left: 10px; /* Adds spacing between the icon and the text */
+}
+
+nav a:hover {
+    color: var(--light-purple); /* subtle hover effect */
+}
+
+.human_icon {
+    width: 30px;
+    opacity: .7;
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+}
+
+/* Transparent post card style with glowing green border */
+section {
+    background-color: rgba(22, 21, 38, 0.8); /* semi-transparent dark background */
+    border: 2px solid var(--alien-green); /* glowing green border */
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 3%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7); /* glowing effect using alien green */
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: scale(1.05); /* slight scale-up on hover */
+}
+
+.banner-video {
+    border-radius: 100px;
+}
+
+/* Flexbox for toggle section */
+.toggle-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Container for individual toggle and question */
+.toggle-container {
+    text-align: center;
+    flex: 1;
+}
+
+/* Base styling for the toggle switch */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider styling for toggle */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondary-dark);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Styling for the video grid */
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    padding: 2%;
+}
+
+.grid-video {
+    width: 30%;
+    height: auto;
+    border-radius: 10px; 
+}
+
+
+@media (max-width: 900px) {
+    .grid-video {
+        width: 90%; 
+    }
+}
+
+/* Toggle background and slider change when checked */
+input:checked + .slider {
+    background-color: var(--alien-green);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* "Yes" label */
+.label-text {
+    display: none;
+    margin-top: 0.5rem;
+    font-family: 'Mitashi Classic', sans-serif;
+    color: var(--alien-green);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Splash Page Specific Styling */
+body.splash {
+    background: radial-gradient(circle at center, #161526, #0f0f1f); /* Dark futuristic radial gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Center container for splash page content */
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* This ensures both header and button are centered horizontally */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header styling for splash page */
+.splash-header h1 {
+    font-family: 'Mitashi Classic', sans-serif;
+    color: var(--alien-green);
+    font-size: 10rem; /* Adjust size as needed */
+    letter-spacing: 0.07em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Splash button styling */
+.splash-button {
+    background-color: var(--alien-green);
+    color: var(--background-dark);
+    border: 2px solid var(--light-purple);
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+
+    /* Center the button manually */
+    position: relative; /* Use relative positioning to allow manual margin control */
+    margin-left: auto;  /* This will ensure the button centers properly */
+    margin-right: auto;
+    display: inline-block;
+}
+
+.splash-button:hover {
+    background-color: var(--light-purple);
+    box-shadow: 0 0 20px rgba(155, 242, 56, 0.5); /* Glow effect */
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+/* Styles for the Kiss or Kill section */
+#kiss-or-kill {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#profile-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7); /* glowing effect using alien green */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+/* Hide all profile cards initially */
+.profile-card {
+    display: none;
+}
+
+/* Display the first profile card by default */
+.profile-card:first-child {
+    display: flex;
+}
+
+/* Swiping left (Kill) */
+.swipe-left {
+    transform: translateX(-400px) rotate(-20deg);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Swiping right (Kiss) */
+.swipe-right {
+    transform: translateX(400px) rotate(20deg);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+#final-card {
+    background-color: var(--light-purple);
+    color: var(--secondary-dark);
+    opacity: 0.45;
+}
+
+#final-card img {
+    display: none;
+}
+
+#actions {
+    margin-top: 20px;
+}
+
+#kiss, #kill {
+    padding: 10px 20px;
+    background-color: var(--alien-green);
+    color: var(--background-dark);
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#kiss:hover {
+    background-color: var(--light-purple);
+}
+
+#kill:hover {
+    background-color: var(--light-purple);
+}
+
+#post1 img, video{
+    width: 100%
+}
+
+#post8 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#post9 video {
+    width: 100%;
+}
+
+#post10 img {
+    width: 100%;
+}
+
+/* Notification Post */
+.notify-button {
+    background-color: var(--alien-green);
+    color: var(--background-dark);
+    border: 2px solid var(--light-purple);
+    padding: 10px 30px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.notify-button:hover {
+    background-color: var(--light-purple);
+    transform: scale(1.05);
+}
+
+/* Floating icon animations */
+.floating-icon {
+    position: fixed;
+    width: 50px;
+    animation: floatUp 4s ease-in-out forwards, fadeOut 4s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.alien-img {
+    display: block;
+    margin: 0 auto 20px; /* Centers image horizontally and adds space below */
+    width: 45%; 
+}
+
+.video-flexbox {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 3%;
+}
+
+.video-flexbox video {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid var(--alien-green) ;
+    box-shadow: 0 0 10px rgba(155, 242, 56, 0.7); /* Optional for added effect */
+}
+
+/* Marquee styles */
+.marquee {
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+  }
+  
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: var(--gap);
+    min-width: 100%;
+    list-style: none; 
+    font-family: 'Mitashi Classic', sans-serif;  /* Ensures the Mitashi font is applied */
+}
+  
+.marquee__content li {
+    color: var(--light-purple);  /* Set text color */
+    font-size: 1.8em;  
+}
+  
+/* Keyframe for scrolling animation */
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+/* Enable animation */
+.marquee__content {
+    animation: scroll 15s linear infinite;
+}
+
+/* Hyperspace launch animation */
+@keyframes hyperspace {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+.hyperspace-launch {
+    animation: hyperspace 1s ease-in-out forwards; /* 1-second duration */
+}
+  

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #161626;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-width: .25px;
+      }
+
+      .cls-4 {
+        fill: #9cf239;
+        font-family: Arial-Black, 'Arial Black';
+        font-size: 4.04px;
+        font-weight: 800;
+      }
+
+      .cls-2 {
+        fill: #3a395a;
+      }
+
+      .cls-3 {
+        fill: none;
+        opacity: .45;
+      }
+
+      .cls-5 {
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <circle class="cls-2" cx="12" cy="12" r="11.03"/>
+  </g>
+  <g id="Layer_7" data-name="Layer 7">
+    <g class="cls-5">
+      <path class="cls-1" d="M18.8,7.28H5.2c-.17,0-.3.13-.3.3v9.15c0,.17.13.3.3.3h.88l-.02-.03h4.02l-.02.03h8.74c.17,0,.3-.13.3-.3V7.58c0-.17-.13-.3-.3-.3Z"/>
+    </g>
+  </g>
+  <path class="cls-3" d="M4.97,16.71l6.97-4.85,7.11,4.95c.09.06.05.22-.06.22H5.06c-.16,0-.22-.23-.09-.32Z"/>
+  <path class="cls-1" d="M4.97,7.57l6.97,4.29,7.11-4.38c.09-.06.05-.2-.06-.2H5.06c-.16,0-.22.2-.09.28Z"/>
+  <text class="cls-4" transform="translate(10.65 10.18)"><tspan x="0" y="0">e</tspan></text>
+</svg>
