@@ -35,7 +35,7 @@ header {
     color: var(--alien-green);
     font-size: 4rem; /* Large impactful text */
     letter-spacing: 0.05em;
-    margin-bottom: 2rem;
+    margin-bottom: 2%;
     text-transform: uppercase; /* Makes it feel bolder and more futuristic */
 }
 
@@ -88,6 +88,10 @@ h3 {
     color: var(--light-purple); /* alien green for titles */
     font-family: 'Martian Mono', monospace;
     margin: 2%;
+}
+
+.profile-card img {
+    width: 85%;
 }
 
 #final-card h4 {
@@ -289,15 +293,9 @@ body.splash {
     height: 100%;
 }
 
-/* Header styling for splash page */
-.splash-header h1 {
-    font-family: 'Mitashi Classic', sans-serif;
-    color: var(--alien-green);
-    font-size: 10rem; /* Adjust size as needed */
-    letter-spacing: 0.07em;
-    margin: 0;
-    text-transform: uppercase;
-    text-align: center;
+#splash-logo {
+    margin: -8%;
+    width: 65%;
 }
 
 /* Splash button styling */
@@ -306,7 +304,7 @@ body.splash {
     color: var(--background-dark);
     border: 2px solid var(--light-purple);
     padding: 15px 40px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     letter-spacing: 0.1rem;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
@@ -321,7 +319,7 @@ body.splash {
 
 .splash-button:hover {
     background-color: var(--light-purple);
-    box-shadow: 0 0 20px rgba(155, 242, 56, 0.5); /* Glow effect */
+    box-shadow: 0 0 20px rgba(12, 14, 9, 0.5); /* Glow effect */
     transform: scale(1.05); /* Slight scale-up on hover */
 }
 
@@ -415,6 +413,138 @@ body.splash {
 #post1 img, video{
     width: 100%
 }
+
+/* Styles for the Music Section */
+#post5 {
+    background-color: rgba(22, 21, 38, 0.8); /* Dark purple background */
+    border: 2px solid var(--alien-green); /* Green border */
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 3%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7); /* Green glowing effect */
+    transition: transform 0.2s;
+}
+
+#post5:hover {
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+/* Styling for the music player */
+.music-player {
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7);
+    background-color: var(--alien-green);
+}
+
+audio {
+    width: 80%;
+    border: 2px solid var(--alien-green);
+    border-radius: 10px;
+    color: var(--light-purple); /* The color for the text on player buttons */
+}
+
+/* Styling for control buttons */
+.player-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.control-btn {
+    padding: 10px 20px;
+    margin: 3%;
+    background-color: var(--alien-green);
+    color: var(--background-dark);
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    border: 3px solid var(--secondary-dark);
+}
+
+.control-btn:hover {
+    background-color: var(--light-purple);
+}
+
+/* Now Playing Text */
+#nowPlayingText {
+    margin-top: 6%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    color: var(--background-dark);
+    font-size: 1.2rem;
+    font-family: 'Martian Mono', monospace;
+}
+
+/* Spam Pop-up Window Styles */
+.spam-popup {
+    position: fixed;
+    background-color: rgba(22, 21, 38, 0.9);
+    color: var(--alien-green);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7); /* glowing green effect */
+    z-index: 1000;
+    max-width: 300px;
+    opacity: 1;
+    transform: translateY(0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: popUpIn 0.4s ease-in-out;
+}
+
+/* Close button for spam pop-ups */
+.close-btn {
+    background-color: var(--alien-green);
+    color: var(--background-dark);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+.close-btn:hover {
+    background-color: var(--light-purple);
+}
+
+/* Staggered spam pop-up positions */
+@keyframes popUpIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Spam Button Styling */
+.spam-button {
+    background-color: var(--alien-green);
+    color: var(--background-dark);
+    border: 2px solid var(--light-purple);
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.spam-button:hover {
+    background-color: var(--light-purple);
+    transform: scale(1.05);
+}
+
 
 #post8 img {
     width: 100%;
@@ -521,6 +651,43 @@ body.splash {
 .marquee__content li {
     color: var(--light-purple);  /* Set text color */
     font-size: 1.8em;  
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px; /* Adds space between the footer and the last section */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#beamMeUpBtn {
+    padding: 15px 40px;
+    background-color: var(--alien-green);
+    color: var(--background-dark);
+    font-family: 'Mitashi Classic', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    border: 2px solid var(--light-purple);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#beamMeUpBtn:hover {
+    background-color: var(--light-purple);
+    transform: scale(1.1);
+}
+
+footer img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
 }
   
 /* Keyframe for scrolling animation */

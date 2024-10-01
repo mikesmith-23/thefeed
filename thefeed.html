@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Feed: Mike's Digital Abduction</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/Alien.png">
 </head>
 <body>
     <header>
@@ -182,15 +183,31 @@
         
 
         <section id="post5">
-            <h3>Watches & Wearables:</h3>
-            <img src="img/wearable-tech.png" alt="Wearable Tech Image">
-            <p>"Look busy, do nothing! Humans wear devices to measure every waking step and calorie, yet they ignore these same gadgets while sitting on the couch. From an alien point of view, it’s like you're wearing a pysical reminder that you’re too lazy to get outside and regularly excercise."</p>
-        </section>
+            <h3>Music:</h3>
+            <p>To our surprise, if there's any redeeming quality to this insufferable species, it's the music! We've been blasting Mike's guilty pleasure playlist on repeat. Here's a little sample below:</p>
+        
+            <!-- Alien-Themed Music Player -->
+            <div class="music-player">
+                <!-- Now Playing Text -->
+                <p id="nowPlayingText">Now Playing: </p>
 
+                <audio id="musicPlayer" controls>
+                    <source src="audio/song1.mp3" type="audio/mp3">
+                </audio>
+        
+                <!-- Player Controls -->
+                <div class="player-controls">
+                    <button class="control-btn" id="prevSong"><</button>
+                    <button class="control-btn" id="playPause">⏯</button>
+                    <button class="control-btn" id="nextSong">></button>
+                </div>
+            </div>
+        </section>
+        
         <section id="post6">
             <h3>Spam:</h3>
-            <img src="img/spam-calls.png" alt="Spam Calls Image">
-            <p>"Day to day, Humans are bombarded by spam calls. From concerned telemarketers trying to reach you about your car's extended waranty to unrelenting political surveys, the dial tones of insanity are ringing off the hook."</p>
+            <p>"Day to day, Humans are bombarded by spam calls. From concerned telemarketers trying to reach you about your car's extended warranty to unrelenting political surveys, the dial tones of insanity are ringing off the hook."</p>
+            <button class="spam-button" onclick="triggerSpamPopups()">Spam!</button>
         </section>
 
         <section id="post7">
@@ -220,8 +237,10 @@
         <section id="post10">
             <h3>Package Tracking:</h3>
             <img src="img/package.gif" alt="3 battered postal packages rotate on loop" loop>
+            <hr>
             <p>"Porch Pirates Beware! Mike’s checking his package status on the hour. Seriously, Humans act like their Amazon delivery is a life-or-death situation. Relax, Earthlings, your priority-mailed/bootlegged flip flops are on the way."</p>
         </section>
+
         <div class="marquee">
             <ul class="marquee__content">
                 <li>☆ DESTROY ☆ ALL ☆ HUMANS ☆</li>
@@ -235,6 +254,14 @@
                 <li>☆ DESTROY ☆ ALL ☆ HUMANS</li>
             </ul>
         </div>
+
+        <!-- Footer Section -->
+        
+        <footer>
+            <button id="beamMeUpBtn">BEAM ME UP</button>
+            <img src="/img/planet.png" alt="alien purple planet"/>
+        </footer>
+
         <script>
 
             let currentProfile = 0;
@@ -297,8 +324,119 @@
                 }
             }
 
+            // JavaScript for handling the cohesive music player
+            const songs = [
+                'audio/miss_macross.mp3',
+                'audio/hold.mp3',
+                'audio/sleepwalking.mp3',
+                'audio/look_at_the_sky.mp3',
+                'audio/pursuit.mp3'
+            ];
+            const songTitles = [
+                'Miss Macross by MACROSS 82-99',
+                'Hold by Home',
+                'Sleepwalking by The Chain Gang of 1974',
+                'Look at the Sky by Porter Robinson',
+                'PURSUIT by Gesaffelstein'
+            ];
+
+            let currentSong = 0;
+            const audioPlayer = document.getElementById('musicPlayer');
+            const nowPlayingText = document.getElementById('nowPlayingText');
+            const playPauseBtn = document.getElementById('playPause');
+            const prevSongBtn = document.getElementById('prevSong');
+            const nextSongBtn = document.getElementById('nextSong');
+
+            // Load the current song and display its title
+            function loadSong(songIndex) {
+                audioPlayer.src = songs[songIndex];
+                nowPlayingText.textContent = `Now Playing: ${songTitles[songIndex]}`;
+            }
+
+            // Play or Pause toggle
+            playPauseBtn.addEventListener('click', function () {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    playPauseBtn.textContent = '⏸️'; // Change button to pause icon
+                } else {
+                    audioPlayer.pause();
+                    playPauseBtn.textContent = '▶️'; 
+                }
+            });
+
+            // Next song
+            nextSongBtn.addEventListener('click', function () {
+                currentSong = (currentSong + 1) % songs.length;
+                loadSong(currentSong);
+                audioPlayer.play();
+                playPauseBtn.textContent = '⏸️'; // Reset to pause icon when switching songs
+            });
+
+            // Previous song
+            prevSongBtn.addEventListener('click', function () {
+                currentSong = (currentSong - 1 + songs.length) % songs.length;
+                loadSong(currentSong);
+                audioPlayer.play();
+                playPauseBtn.textContent = '⏸️'; // Reset to pause icon when switching songs
+            });
+
+            // Load the first song on page load but do not auto-play it
+            window.onload = () => loadSong(currentSong);
+
+            // Scroll to top when the "BEAM ME UP!!" button is clicked
+            document.getElementById('beamMeUpBtn').addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Smooth scroll effect
+                });
+            });
+
+            function triggerSpamPopups() {
+        // List of 15 spam email messages
+        const spamMessages = [
+            "🚀 'URGENT: Your intergalactic royalty inheritance is awaiting transfer!'",
+            "🛸 'Upgrade your spaceship's extended warranty now!'",
+            "👽 'Claim your free moon vacation! Limited offer!'",
+            "🔊 'You’ve been pre-approved for space credits!'",
+            "🌌 'Be a part of the first Galactic Lottery! 1 in a million chance to win!'",
+            "📞 'Reminder: Your cosmic subscription is expiring soon. Renew now!'",
+            "🚨 'Last chance to buy asteroid insurance!'",
+            "💫 'Protect your planetary investments with our galactic trust fund!'",
+            "💸 'Transfer 5,000 space credits to save your galaxy from invasion!'",
+            "🧑‍🚀 'Alien dating app! Find love across the universe!'",
+            "🪐 'Urgent: Solar system safety check!'",
+            "🌠 'Buy now: Limited edition black hole souvenir!'",
+            "🛸 'Your UFO's warranty has expired. Act fast!'",
+            "🌍 'Earth-to-Mars shuttle service available now. Book your trip!'",
+            "👾 'Winning notification: You've received 10,000 space coins!'"
+        ];
+
+        // Function to create and display popups
+        for (let i = 0; i < 3; i++) {
+            const randomMessage = spamMessages[Math.floor(Math.random() * spamMessages.length)];
+            
+            const popup = document.createElement('div');
+            popup.classList.add('spam-popup');
+            popup.textContent = randomMessage;
+
+            // Create round close button
+            const closeButton = document.createElement('button');
+            closeButton.classList.add('close-btn');
+            closeButton.textContent = 'X';
+            closeButton.onclick = () => popup.remove();
+
+            // Append close button to the pop-up
+            popup.appendChild(closeButton);
+
+            // Set random position for the pop-up
+            popup.style.left = `${Math.random() * 80}vw`;
+            popup.style.top = `${Math.random() * 60}vh`;
+
+            document.body.appendChild(popup);
+        }
+    }
+
         </script>
-        <!-- Put Footer Here -->
     </main>
 </body>
 </html>
