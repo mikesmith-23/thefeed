@@ -1,48 +1,49 @@
 /* The Feed : CSS Stylesheet */
 
-/* Importing Martian Mono from Google Fonts */
+/* Import Martian Mono from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;700&display=swap');
 
-/* Font-face for Mitashi Classic (ensure this font is in your 'fonts' folder) */
+/* Font-face for Mitashi Classic */
 @font-face {
     font-family: 'Mitashi Classic';
     src: url('fonts/Mitashi-Classic.ttf') format('truetype');
 }
 
-/* Define CSS variables for color story */
+/* CSS color story */
 :root {
     --background-dark: #161526;
     --secondary-dark: #3A3959;
     --light-purple: #A89AD9;
-    --alien-green: #9BF238; /* updated alien green color */
+    --alien-green: #9BF238; 
     --white: #ffffff;
 }
 
-/* Base styling for the entire website */
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Martian Mono', monospace; /* default font */
-    background-color: var(--background-dark); /* dark alien theme background */
+    font-family: 'Martian Mono', monospace; 
+    background-color: var(--background-dark); 
     color: var(--white);
     max-width: 100%;
     overflow-x: hidden;
-    font-size: 16px; /* slightly smaller base font size for better balance */
+    font-size: 16px; 
 }
 
 header {
-    font-family: 'Mitashi Classic', sans-serif; /* Futuristic header font */
+    font-family: 'Mitashi Classic', sans-serif; 
     color: var(--alien-green);
-    font-size: 4rem; /* Large impactful text */
+    font-size: 4rem; 
     letter-spacing: 0.05em;
-    margin-bottom: 2%;
-    text-transform: uppercase; /* Makes it feel bolder and more futuristic */
+    margin-bottom: -70px;
+    text-transform: uppercase; 
+    margin-top: -70px;
 }
 
 main {
     margin-left: 22%;
     padding: 2%;
-    font-size: 1.1em; /* body text size balanced for readability */
+    font-size: 1.1em; 
 }
 
 main h2 {
@@ -53,7 +54,7 @@ main h2 {
 }
 
 main strong {
-    color: var(--light-purple); /* Contrast with green for a modern, sleek feel */
+    color: var(--light-purple); 
     font-size: 1.5rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -65,27 +66,27 @@ h1 {
 }
 
 h2 {
-    font-size: 1.6em; /* smaller h2 for visual hierarchy */
+    font-size: 1.6em; 
     color: var(--alien-green);
     font-family: 'Martian Mono', monospace;
-    margin: 0.5em 0; /* add a bit of space below */
+    margin: 0.5em 0; 
 }
 
 h3 {
-    color: var(--alien-green); /* alien green for titles */
+    color: var(--alien-green); 
     font-family: 'Mitashi Classic', sans-serif;
-    font-size: 1.5em; /* balanced h3 for post titles */
+    font-size: 1.5em; 
     margin-bottom: 0.5rem;
 }
 
 .toggle-container h4 {
-    color: var(--light-purple); /* alien green for titles */
+    color: var(--light-purple); 
     font-family: 'Martian Mono', monospace;
     margin: 2%;
 }
 
 #profile-container h4 {
-    color: var(--light-purple); /* alien green for titles */
+    color: var(--light-purple); 
     font-family: 'Martian Mono', monospace;
     margin: 2%;
 }
@@ -95,19 +96,19 @@ h3 {
 }
 
 #final-card h4 {
-    color: var(--secondary-dark); /* alien green for titles */
+    color: var(--secondary-dark); 
     font-family: 'Martian Mono', monospace;
     margin: 2%;
 }
 
 p {
     color: var(--white);
-    font-size: 1.1em; /* body text size adjusted for balance */
+    font-size: 1.1em; 
 }
 
 nav {
-    background-color: var(--background-dark); /* matches body background */
-    color: var(--light-purple); /* lighter purple tone */
+    background-color: var(--background-dark); 
+    color: var(--light-purple); 
     position: fixed;
     top: 0;
     left: 0;
@@ -115,12 +116,13 @@ nav {
     height: 100vh;
     padding: 2%;
     border-right: 2px solid var(--light-purple);
+
 }
 
 nav h3 {
     font-family: 'Mitashi Classic', sans-serif;
     color: var(--alien-green);
-    font-size: 1.6em; /* balanced nav heading */
+    font-size: 1.6em; 
     margin-bottom: 1rem;
 }
 
@@ -131,21 +133,21 @@ nav ul {
 }
 
 nav li {
-    display: flex; /* Use flexbox to align items horizontally */
-    align-items: center; /* Vertically centers the icon and text */
+    display: flex; 
+    align-items: center; 
     margin-bottom: 1em;
 }
 
 nav a {
     color: var(--alien-green);
     text-decoration: none;
-    font-size: 1.2em; /* increased nav link size */
+    font-size: 1.2em; 
     font-weight: bold;
-    margin-left: 10px; /* Adds spacing between the icon and the text */
+    margin-left: 10px; 
 }
 
 nav a:hover {
-    color: var(--light-purple); /* subtle hover effect */
+    color: var(--light-purple); 
 }
 
 .human_icon {
@@ -154,27 +156,27 @@ nav a:hover {
     flex-shrink: 0; /* Prevents the icon from shrinking */
 }
 
-/* Transparent post card style with glowing green border */
+/* Transparent Postcard Styling */
 section {
-    background-color: rgba(22, 21, 38, 0.8); /* semi-transparent dark background */
-    border: 2px solid var(--alien-green); /* glowing green border */
+    background-color: rgba(22, 21, 38, 0.8); 
+    border: 2px solid var(--alien-green); 
     border-radius: 10px;
     padding: 20px;
     margin-left: 3%;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7); /* glowing effect using alien green */
+    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7); 
     transition: transform 0.2s;
 }
 
 section:hover {
-    transform: scale(1.05); /* slight scale-up on hover */
+    transform: scale(1.05); 
 }
 
 .banner-video {
     border-radius: 100px;
 }
 
-/* Flexbox for toggle section */
+/* Security Toggles */
 .toggle-section {
     display: flex;
     justify-content: space-between;
@@ -183,13 +185,11 @@ section:hover {
     margin-top: 2rem;
 }
 
-/* Container for individual toggle and question */
 .toggle-container {
     text-align: center;
     flex: 1;
 }
 
-/* Base styling for the toggle switch */
 .toggle {
     position: relative;
     display: inline-block;
@@ -203,7 +203,6 @@ section:hover {
     height: 0;
 }
 
-/* Slider styling for toggle */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -228,7 +227,7 @@ section:hover {
     border-radius: 50%;
 }
 
-/* Styling for the video grid */
+/* Ads Video Grid */
 .video-grid {
     display: flex;
     flex-wrap: wrap;
@@ -270,9 +269,9 @@ input:checked + .slider:before {
     font-weight: bold;
 }
 
-/* Splash Page Specific Styling */
+/* Splash Page Styling */
 body.splash {
-    background: radial-gradient(circle at center, #161526, #0f0f1f); /* Dark futuristic radial gradient */
+    background: radial-gradient(circle at center, #161526, #0f0f1f); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -282,12 +281,11 @@ body.splash {
     overflow: hidden;
 }
 
-/* Center container for splash page content */
 .splash-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* This ensures both header and button are centered horizontally */
+    align-items: center; 
     text-align: center;
     width: 100%;
     height: 100%;
@@ -298,7 +296,6 @@ body.splash {
     width: 65%;
 }
 
-/* Splash button styling */
 .splash-button {
     background-color: var(--alien-green);
     color: var(--background-dark);
@@ -309,21 +306,19 @@ body.splash {
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     border-radius: 5px;
-
-    /* Center the button manually */
-    position: relative; /* Use relative positioning to allow manual margin control */
-    margin-left: auto;  /* This will ensure the button centers properly */
+    position: relative; 
+    margin-left: auto;  
     margin-right: auto;
     display: inline-block;
 }
 
 .splash-button:hover {
     background-color: var(--light-purple);
-    box-shadow: 0 0 20px rgba(12, 14, 9, 0.5); /* Glow effect */
-    transform: scale(1.05); /* Slight scale-up on hover */
+    box-shadow: 0 0 20px rgba(12, 14, 9, 0.5); 
+    transform: scale(1.05); 
 }
 
-/* Styles for the Kiss or Kill section */
+/* Kiss or Kill section */
 #kiss-or-kill {
     text-align: center;
     margin-top: 20px;
@@ -342,7 +337,7 @@ body.splash {
     height: 100%;
     color: var(--white);
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7); /* glowing effect using alien green */
+    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7); 
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -358,7 +353,7 @@ body.splash {
     display: none;
 }
 
-/* Display the first profile card by default */
+/* Display first profile card by default */
 .profile-card:first-child {
     display: flex;
 }
@@ -414,23 +409,22 @@ body.splash {
     width: 100%
 }
 
-/* Styles for the Music Section */
+/* Music Section */
 #post5 {
-    background-color: rgba(22, 21, 38, 0.8); /* Dark purple background */
-    border: 2px solid var(--alien-green); /* Green border */
+    background-color: rgba(22, 21, 38, 0.8); 
+    border: 2px solid var(--alien-green); 
     border-radius: 10px;
     padding: 20px;
     margin-left: 3%;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7); /* Green glowing effect */
+    box-shadow: 0 0 15px rgba(155, 242, 56, 0.7); 
     transition: transform 0.2s;
 }
 
 #post5:hover {
-    transform: scale(1.05); /* Slight scale-up on hover */
+    transform: scale(1.05); 
 }
 
-/* Styling for the music player */
 .music-player {
     text-align: center;
     margin-top: 20px;
@@ -443,10 +437,9 @@ audio {
     width: 80%;
     border: 2px solid var(--alien-green);
     border-radius: 10px;
-    color: var(--light-purple); /* The color for the text on player buttons */
+    color: var(--light-purple); 
 }
 
-/* Styling for control buttons */
 .player-controls {
     display: flex;
     justify-content: center;
@@ -470,7 +463,6 @@ audio {
     background-color: var(--light-purple);
 }
 
-/* Now Playing Text */
 #nowPlayingText {
     margin-top: 6%;
     padding-top: 5%;
@@ -480,7 +472,7 @@ audio {
     font-family: 'Martian Mono', monospace;
 }
 
-/* Spam Pop-up Window Styles */
+/* Spam Pop-up Window */
 .spam-popup {
     position: fixed;
     background-color: rgba(22, 21, 38, 0.9);
@@ -514,7 +506,7 @@ audio {
     background-color: var(--light-purple);
 }
 
-/* Staggered spam pop-up positions */
+/* Stagger spam pop-up positions */
 @keyframes popUpIn {
     0% {
         opacity: 0;
@@ -526,7 +518,6 @@ audio {
     }
 }
 
-/* Spam Button Styling */
 .spam-button {
     background-color: var(--alien-green);
     color: var(--background-dark);
@@ -545,7 +536,6 @@ audio {
     transform: scale(1.05);
 }
 
-
 #post8 img {
     width: 100%;
     border-radius: 10px;
@@ -559,7 +549,7 @@ audio {
     width: 100%;
 }
 
-/* Notification Post */
+/* Notifications */
 .notify-button {
     background-color: var(--alien-green);
     color: var(--background-dark);
@@ -606,11 +596,12 @@ audio {
     }
 }
 
-
+/* Alien Logo */
 .alien-img {
     display: block;
-    margin: 0 auto 20px; /* Centers image horizontally and adds space below */
-    width: 45%; 
+    margin: 0 auto 20px; 
+    margin-top: -20px;
+    width: 35%; 
 }
 
 .video-flexbox {
@@ -625,7 +616,7 @@ audio {
     height: auto;
     border-radius: 10px;
     border: 2px solid var(--alien-green) ;
-    box-shadow: 0 0 10px rgba(155, 242, 56, 0.7); /* Optional for added effect */
+    box-shadow: 0 0 10px rgba(155, 242, 56, 0.7); 
 }
 
 /* Marquee styles */
@@ -645,11 +636,11 @@ audio {
     gap: var(--gap);
     min-width: 100%;
     list-style: none; 
-    font-family: 'Mitashi Classic', sans-serif;  /* Ensures the Mitashi font is applied */
+    font-family: 'Mitashi Classic', sans-serif; 
 }
   
 .marquee__content li {
-    color: var(--light-purple);  /* Set text color */
+    color: var(--light-purple); 
     font-size: 1.8em;  
 }
 
@@ -659,7 +650,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: 50px; /* Adds space between the footer and the last section */
+    margin-top: 50px; 
     position: relative;
     bottom: 0;
     width: 100%;
@@ -685,12 +676,13 @@ footer {
 }
 
 footer img {
-    width: 100%;
     position: absolute;
+    opacity: .45;
     z-index: -1;
+    margin-top: -300px;
 }
   
-/* Keyframe for scrolling animation */
+/* Scrolling animation */
 @keyframes scroll {
     from {
       transform: translateX(0);

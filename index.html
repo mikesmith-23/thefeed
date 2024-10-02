@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Feed: Commence Alien Abduction</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/Alien.png">
 </head>
 <body class="splash">
@@ -14,13 +16,7 @@
             <button class="splash-button" onclick="launchHyperspace()"> >>> Enter The Feed <<< </button>
         </div>
     </div>
-    <script>
-        function launchHyperspace() {
-            document.body.classList.add('hyperspace-launch');
-            setTimeout(function() {
-                window.location.href = 'thefeed.html';
-            }, 1000);
-        }
-    </script>
+    <!-- JavaScript -->
+    <script src="scripts/splash.js"></script>
 </body>
 </html>

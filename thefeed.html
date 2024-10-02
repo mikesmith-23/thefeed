@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Feed: Mike's Digital Abduction</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/Alien.png">
 </head>
 <body>
@@ -90,7 +92,7 @@
             <img src="img/cookies.png" alt="Permission Settings Image">
             <p>"Under a spell of deep delusion, Humans (like Mike) hit 'I Agree' as if it were a born reflex, thinking it grants some form of guaranteed privacy. SPOILER ALERT: it doesn’t! By the time you've clicked past the 'Terms and Conditions', we’ve already been granted full access. C'mon people...It’s like signing a contract with your eyes closed!"</p>
             
-            <!-- Toggle Questions in Flexbox Row -->
+            <!-- Toggle Security Questions -->
             <div class="toggle-section">
                 <div class="toggle-container">
                     <h4>info. theft?</h4>
@@ -125,7 +127,7 @@
             
             <p>"Humans swipe for love like they’re shopping for expired soup. On these apps, algorithms and blurry selfies decide lifelong romantic relationships and deceptive catfishing profiles run rampant. To be honest, we’ve seen stronger cosmic connections in asteroid fields."</p>
             
-            <!-- Kiss or Kill Interactive Alien Profiles -->
+            <!-- Kiss or Kill Interactive Dating Profiles -->
             <div id="kiss-or-kill">
                 <hr>
                 <h2>Martian Mingle</h2><hr><br>
@@ -182,24 +184,22 @@
             <button class="notify-button" onclick="triggerNotifications()"><u><b>Warning</b></u>: Click at Your Own Risk</button>
         </section>
         
-        <!-- Sound effect -->
+        <!-- Bubble Sound effect -->
         <audio id="bubbleSound" src="audio/bubble_sound.mp3"></audio>
         
 
         <section id="post5">
             <h3>Music:</h3>
-            <p>To our surprise, if there's any redeeming quality to this insufferable species, it's the music! We've been blasting Mike's guilty pleasure playlist on repeat. Here's a little sample below:</p>
+            <p>To our surprise, if there's any redeeming quality to this insufferable species, it's the music! We've been blasting Mike's guilty pleasures on repeat. Here's a little sample of his playlist below:</p>
         
             <!-- Alien-Themed Music Player -->
             <div class="music-player">
-                <!-- Now Playing Text -->
                 <p id="nowPlayingText">Now Playing: </p>
 
                 <audio id="musicPlayer" controls>
                     <source src="audio/song1.mp3" type="audio/mp3">
                 </audio>
-        
-                <!-- Player Controls -->
+
                 <div class="player-controls">
                     <button class="control-btn" id="prevSong"><</button>
                     <button class="control-btn" id="playPause">⏯</button>
@@ -259,188 +259,13 @@
             </ul>
         </div>
 
-        <!-- Footer Section -->
-        
         <footer>
             <button id="beamMeUpBtn">BEAM ME UP</button>
             <img src="img/planet.png" alt="alien purple planet"/>
         </footer>
 
-        <script>
-
-            let currentProfile = 0;
-
-            function swipeLeft() {
-                const profiles = document.querySelectorAll('.profile-card');
-                if (currentProfile < profiles.length - 1) {
-                    profiles[currentProfile].classList.add('swipe-left');
-                    setTimeout(() => {
-                        profiles[currentProfile].style.display = 'none';
-                        currentProfile++;
-                        if (currentProfile < profiles.length - 1) {
-                            profiles[currentProfile].style.display = 'flex';
-                        } else {
-                            document.getElementById('final-card').style.display = 'block';
-                        }
-                    }, 600); // Delay to allow the swipe animation to finish
-                }
-            }
-
-            function swipeRight() {
-                const profiles = document.querySelectorAll('.profile-card');
-                if (currentProfile < profiles.length - 1) {
-                    profiles[currentProfile].classList.add('swipe-right');
-                    setTimeout(() => {
-                        profiles[currentProfile].style.display = 'none';
-                        currentProfile++;
-                        if (currentProfile < profiles.length - 1) {
-                            profiles[currentProfile].style.display = 'flex';
-                        } else {
-                            document.getElementById('final-card').style.display = 'block';
-                        }
-                    }, 600); // Delay to allow the swipe animation to finish
-                }
-            }
-
-            function triggerNotifications() {
-                const notificationIcons = ['email_icon.svg', 'like_icon.svg', 'love_icon.svg', 'message_icon.svg'];
-                const bubbleSound = document.getElementById('bubbleSound');
-                
-                // Play the bubble sound
-                bubbleSound.play();
-
-                // Generate 45 floating icons
-                for (let i = 0; i < 45; i++) {
-                    const icon = document.createElement('img');
-                    icon.src = `img/${notificationIcons[Math.floor(Math.random() * notificationIcons.length)]}`;
-                    icon.classList.add('floating-icon');
-
-                    // Set random horizontal position for the icons
-                    icon.style.left = `${Math.random() * 100}vw`;
-                    icon.style.top = `${Math.random() * 80}vh`;
-
-                    document.body.appendChild(icon);
-
-                    // Remove icon after the animation finishes (4 seconds)
-                    setTimeout(() => {
-                        icon.remove();
-                    }, 4000);
-                }
-            }
-
-            // JavaScript for handling the cohesive music player
-            const songs = [
-                'audio/miss_macross.mp3',
-                'audio/hold.mp3',
-                'audio/sleepwalking.mp3',
-                'audio/look_at_the_sky.mp3',
-                'audio/pursuit.mp3'
-            ];
-            const songTitles = [
-                'Miss Macross by MACROSS 82-99',
-                'Hold by Home',
-                'Sleepwalking by The Chain Gang of 1974',
-                'Look at the Sky by Porter Robinson',
-                'PURSUIT by Gesaffelstein'
-            ];
-
-            let currentSong = 0;
-            const audioPlayer = document.getElementById('musicPlayer');
-            const nowPlayingText = document.getElementById('nowPlayingText');
-            const playPauseBtn = document.getElementById('playPause');
-            const prevSongBtn = document.getElementById('prevSong');
-            const nextSongBtn = document.getElementById('nextSong');
-
-            // Load the current song and display its title
-            function loadSong(songIndex) {
-                audioPlayer.src = songs[songIndex];
-                nowPlayingText.textContent = `Now Playing: ${songTitles[songIndex]}`;
-            }
-
-            // Play or Pause toggle
-            playPauseBtn.addEventListener('click', function () {
-                if (audioPlayer.paused) {
-                    audioPlayer.play();
-                    playPauseBtn.textContent = '⏸️'; // Change button to pause icon
-                } else {
-                    audioPlayer.pause();
-                    playPauseBtn.textContent = '▶️'; 
-                }
-            });
-
-            // Next song
-            nextSongBtn.addEventListener('click', function () {
-                currentSong = (currentSong + 1) % songs.length;
-                loadSong(currentSong);
-                audioPlayer.play();
-                playPauseBtn.textContent = '⏸️'; // Reset to pause icon when switching songs
-            });
-
-            // Previous song
-            prevSongBtn.addEventListener('click', function () {
-                currentSong = (currentSong - 1 + songs.length) % songs.length;
-                loadSong(currentSong);
-                audioPlayer.play();
-                playPauseBtn.textContent = '⏸️'; // Reset to pause icon when switching songs
-            });
-
-            // Load the first song on page load but do not auto-play it
-            window.onload = () => loadSong(currentSong);
-
-            // Scroll to top when the "BEAM ME UP!!" button is clicked
-            document.getElementById('beamMeUpBtn').addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth' // Smooth scroll effect
-                });
-            });
-
-            function triggerSpamPopups() {
-        // List of 15 spam email messages
-        const spamMessages = [
-            "🚀 'URGENT: Your intergalactic royalty inheritance is awaiting transfer!'",
-            "🛸 'Upgrade your spaceship's extended warranty now!'",
-            "👽 'Claim your free moon vacation! Limited offer!'",
-            "🔊 'You’ve been pre-approved for space credits!'",
-            "🌌 'Be a part of the first Galactic Lottery! 1 in a million chance to win!'",
-            "📞 'Reminder: Your cosmic subscription is expiring soon. Renew now!'",
-            "🚨 'Last chance to buy asteroid insurance!'",
-            "💫 'Protect your planetary investments with our galactic trust fund!'",
-            "💸 'Transfer 5,000 space credits to save your galaxy from invasion!'",
-            "🧑‍🚀 'Alien dating app! Find love across the universe!'",
-            "🪐 'Urgent: Solar system safety check!'",
-            "🌠 'Buy now: Limited edition black hole souvenir!'",
-            "🛸 'Your UFO's warranty has expired. Act fast!'",
-            "🌍 'Earth-to-Mars shuttle service available now. Book your trip!'",
-            "👾 'Winning notification: You've received 10,000 space coins!'"
-        ];
-
-        // Function to create and display popups
-        for (let i = 0; i < 3; i++) {
-            const randomMessage = spamMessages[Math.floor(Math.random() * spamMessages.length)];
-            
-            const popup = document.createElement('div');
-            popup.classList.add('spam-popup');
-            popup.textContent = randomMessage;
-
-            // Create round close button
-            const closeButton = document.createElement('button');
-            closeButton.classList.add('close-btn');
-            closeButton.textContent = 'X';
-            closeButton.onclick = () => popup.remove();
-
-            // Append close button to the pop-up
-            popup.appendChild(closeButton);
-
-            // Set random position for the pop-up
-            popup.style.left = `${Math.random() * 80}vw`;
-            popup.style.top = `${Math.random() * 60}vh`;
-
-            document.body.appendChild(popup);
-        }
-    }
-
-        </script>
     </main>
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
 </body>
 </html>
